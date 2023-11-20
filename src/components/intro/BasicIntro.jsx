@@ -50,7 +50,7 @@ export default function BasicIntro() {
             <BasicIntroWrapper>
                 <IntroBackground/>
                 <ShortIntro>
-                    <h1>FrontEnd & BackEnd.</h1>
+                    <h1>BackEnd & FrontEnd.</h1>
                     <h3>FullStack 웹 개발자 신지운입니다.</h3>
                     <div>
                         항상 새로운 지식을 탐구하는 데 열정적인 개발자입니다.
