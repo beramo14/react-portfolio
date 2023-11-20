@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 const Content = styled.div`
   width: 100vw;
-  background-color: ${(props)=>props.backgroundColor || "rgba(0, 0, 0, 0)"};
+  background-color: ${(props)=>props.backgroundColor || "rgba(0,0,0,0)"};
 `;
 
 const Intro = styled.div`
