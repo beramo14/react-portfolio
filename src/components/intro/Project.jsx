@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 import zbroImg from "../../assets/images/project/zbro.gif";
 import snsImg from "../../assets/images/project/sns.gif";
 import todoImg from "../../assets/images/project/todo.gif";
 import boardImg from "../../assets/images/project/board.gif";
 import portfolioImg from "../../assets/images/project/portfolio.JPG";
-
 
 
 const ProjectRow = styled.div`
@@ -30,10 +29,20 @@ const ProjectCard = styled.div`
         width: 400px;
         height: 270px;
         img {
+            position: relative;
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+            transform: scale(1, 1);
+            transition-property: transform, box-shadow;
+            transition-duration: .4s;
+            z-index: 1;
+            &:hover {
+                transform: scale(1.4, 1.4);
+                box-shadow: 3px 3px 13px 1px rgb(0 0 0 / 50%);
+                z-index: 100;
+            }
         }
     }
     div.detail {
@@ -48,6 +57,10 @@ const ProjectCard = styled.div`
             padding:0;
             font-size: 26px;
             font-weight: bold;
+            a {
+                text-decoration: none;
+                color: black;
+            }
         }
         p.intro {
             margin: 0;
@@ -91,6 +104,7 @@ const ProjectCard = styled.div`
 `;
 
 
+
 export default function Project() {
     return (
         <>
@@ -101,7 +115,9 @@ export default function Project() {
                     </div>
                     <div className="detail">
                         <span>팀 프로젝트(국비교육과정)</span>
-                        <h2>지브로</h2>
+                        <h2>
+                            <a href="https://zbro.beramo.kr/" target="_blank" rel="noreferrer noopener">지브로</a>
+                        </h2>
                         <p className="intro">1인가구 생활공간 중계서비스</p>
                         <div className="ref">
                             <p>GitHub : <a href="https://github.com/beramo14/ZBRO" target="_blank" rel="noreferrer noopener">github.com/beramo14/ZBRO</a></p>
@@ -134,7 +150,9 @@ export default function Project() {
                     </div>
                     <div className="detail">
                         <span>개인 프로젝트(국비교육과정)</span>
-                        <h2>Spring SNS</h2>
+                        <h2>
+                            <a href="https://sns.beramo.kr/" target="_blank" rel="noreferrer noopener">Spring SNS</a>
+                        </h2>
                         <p className="intro">Spring boot를 사용하여 만든 SNS</p>
                         <div className="ref">
                             <p>GitHub : <a href="https://github.com/beramo14/spring-sns" target="_blank" rel="noreferrer noopener">github.com/beramo14/spring-sns</a></p>
@@ -211,7 +229,9 @@ export default function Project() {
                     </div>
                     <div className="detail">
                         <span>개인 프로젝트</span>
-                        <h2>react-portfolio</h2>
+                        <h2>
+                            <a href="https://beramo.kr/" target="_blank" rel="noreferrer noopener">react-portfolio</a>
+                        </h2>
                         <p className="intro">포트폴리오 </p>
                         <div className="ref">
                             <p>GitHub : <a href="https://github.com/beramo14/react-portfolio" target="_blank" rel="noreferrer noopener">github.com/beramo14/react-portfolio</a></p>
