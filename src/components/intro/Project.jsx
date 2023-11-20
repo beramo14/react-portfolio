@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
 import zbroImg from "../../assets/images/project/zbro.gif";
 import snsImg from "../../assets/images/project/sns.gif";
